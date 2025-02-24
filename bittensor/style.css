@@ -1,0 +1,247 @@
+
+* {
+	font-family: "Montserrat", sans-serif !important;
+    margin: 0;padding: 0;
+    box-sizing: border-box;   
+}
+
+body{
+    background-color: rgb(253,253,253,0.52);
+    overflow-x: hidden;
+}
+
+
+
+/* #########################  Nav styling ############################  */
+
+nav{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+    background: rgb(255, 255, 255);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.116);
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;    
+}
+nav .container .nav-logo{
+    width:180px;
+    cursor: pointer;
+    z-index: 9999;
+}
+nav .container .nav-logo img{
+    width:100%;
+}
+nav .container .nav-links{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    top: -400px;
+    padding: 20px 0px;
+    transition: top 0.5s ease-in-out ;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+nav .container .nav-links.active{
+    top: 66px;
+}
+nav .container .nav-links ul{
+    list-style: none;
+    text-align: center;    
+}
+nav .container .nav-links ul li{
+    padding: 15px 0px;
+    cursor: pointer;
+}
+nav .container .nav-links ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+}
+nav .container .nav-links ul li:hover a{
+    letter-spacing: 2px;
+}
+nav .container .nav-toggle{
+    cursor: pointer;
+    z-index: 9999;
+}
+nav .container .nav-toggle span{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(4, 4, 4);
+    height: 3px;
+    width: 17px;
+    transition: height 0.2s linear;
+    border-radius: 20px;
+}
+nav .container .nav-toggle span::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(4, 4, 4);
+    border-radius: 20px;
+    height: 3px;
+    width: 17px;
+    top:-8px;
+    transform-origin: center;
+    transition: all 0.2s linear;
+}
+nav .container .nav-toggle span::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-color: rgb(4, 4, 4);
+    border-radius: 20px;
+    height: 3px;
+    width: 17px;
+    top:8px;
+    transform-origin: center;
+    transition: all 0.3s linear;
+}
+nav .container .nav-toggle span.active{
+    height: 0;
+}
+nav .container .nav-toggle span.active::before{
+    transform: rotate(45deg);
+    top: -3px;
+}
+nav .container .nav-toggle span.active::after{
+    transform: rotate(-45deg);
+    top: -3px;
+}
+
+header{
+
+    position: relative;
+    background-image: linear-gradient(to right bottom, #0b1287, #2e2ea3, #484ac0, #6066dd, #7883fb);
+    z-index: 1;
+}
+
+.header__content{
+  padding: 20% 45% 4% 30px;
+  color: white;
+}
+
+.header__content h2{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.header__content p{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    padding-right: 30%;
+    line-height: 30px;
+}
+
+.top-btn{
+    display: inline-block;
+    background-color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    color: #2947e5;
+    margin-bottom: 40px;
+}
+
+.btn-long{
+    padding: 15px 58px;
+}
+.header__triangle{
+    margin-top: -35px;
+    text-align: center;
+}
+
+.header__triangle img{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg);
+    z-index: -2;
+
+}
+
+.header__content__lower-text a{
+    text-decoration: none;
+    padding-right: 5rem;
+    color: white;
+}
+
+.header__content__lower-text a em{
+    padding-left: 10px;
+}
+
+.about,.section-3,.section-4,.section-5,.section-6,.section-7,.section-8{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+
+.about img,.section-3 img,.section-4 img,.section-5 img,.section-6 img,.section-7 img,.section-8 img{
+    width: 100%;
+}
+
+div.container{
+    padding: 20px;
+}
+
+
+section.section-8{
+    padding-bottom: 0;
+}
+@media (max-width: 1003px) {
+
+    .header__content{
+        padding: 20% 19% 4% 30px;
+        color: white;
+      }
+
+      .header__content__lower-text p{
+        margin-bottom: 20px;
+      }
+      .header__content__lower-text a{
+        display: block;
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width: 503px) {
+
+    .header__content{
+        padding: 35% 15% 4% 30px;
+      }
+
+    .header__content h2{
+        margin-bottom: 20px;
+        font-size: 2rem;
+        
+      }    
+
+    .header__content p{
+        padding-right: 15%;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+        
+    .top-btn{
+        margin-bottom: 10px;
+    }
+
+    .header__content__lower-text p{
+            margin-top: 50px;
+        }
+}
